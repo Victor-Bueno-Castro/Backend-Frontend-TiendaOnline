@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <form action= "/update/{{producto.id}}" method="POST" class="card bg-dark text-white">
+            <div class="card-body p-4">
+             <div class="mb-3">
+                 <label for="nombreProducto">Nombre del producto:</label>
+                 <input type="text" name="nombreProducto" placeholder="Nombre del producto" value="{{producto.nombreProducto}}" class="form-control rounded-0 bg-dark border-0  text-white"/>
+             </div>
+             <div class="mb-3">
+                 <label for="sku">SKU:</label>
+                 <input type="text" name="sku" placeholder="SKU" value="{{producto.sku}}" class="form-control rounded-0 bg-dark border-0  text-white"/>
+             </div>
+             <div class="mb-3">
+                 <label for="tags">Tags:</label>
+                 <input type="text" name="tags" placeholder="Tags" value="{{producto.tags}}" class="form-control rounded-0 bg-dark border-0  text-white"/>
+             </div>
+             <div class="mb-3">
+                 <label for="costo">Costo:</label>
+                 <input type="text" name="costo" placeholder="$ Costo" value="{{producto.costo}}" class="form-control rounded-0 bg-dark border-0  text-white"/>
+             </div>
+             <div class="mb-3">
+                 <label for="estatus">Estatus:</label>
+                 <input type="text" name="estatus" placeholder="Estatus" value="{{producto.estatus}}" class="form-control rounded-0 bg-dark border-0  text-white"/>
+             </div>
+             <div class="mb-3">
+                 <label for="tallas">Tallas:</label>
+                 <input type="text" name="tallas" placeholder="Tallas" value="{{producto.tallas}}" class="form-control rounded-0 bg-dark border-0  text-white"/>
+             </div>
+             <button class="btn btn-primary">Actualizar</button>
+            </div>
+         </form> 
+    </div>
+</div>
+{% endblock %}
